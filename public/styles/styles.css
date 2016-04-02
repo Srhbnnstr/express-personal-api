@@ -11,12 +11,13 @@ h1 {
   text-align: center;
   color: #3a3a3a;
   background-color: rgba(250,250,250,.8);
-  border-radius:50px;-moz-border-radius:50px;-webkit-border-radius:50px;
+  border-radius:50%;-moz-border-radius:50%;-webkit-border-radius:50%;
+  width: 200px;
+  height: 200px;
 }
 
 a {
   text-align: center;
-  color: #00776f;
+  color: #3a3a3a;
   font-family: font-family: 'Dosis' , sans-serif;
-  margin: 20px;
 }
