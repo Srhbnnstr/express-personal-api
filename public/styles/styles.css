@@ -1,10 +1,14 @@
 body {
   color: #333;
-  font-family: Helvetica, Arial, sans-serif;
   background-image: url("http://33.media.tumblr.com/239f9203605147a03961a08a7a161d34/tumblr_n1ywmf3f9g1qf4z4ho1_r2_400.gif");
+
 }
 
 h1 {
+  font-family: 'Lobster' cursive;
   margin-top: 100px;
   text-align: center;
+  color: #3a3a3a;
+  background-color: rgba(100,100,100,.5);
+  border-radius:10px;-moz-border-radius:10px;-webkit-border-radius:10px;
 }
