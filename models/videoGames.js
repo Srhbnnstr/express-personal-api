@@ -2,7 +2,7 @@
  var mongoose = require('mongoose'),
    Schema = mongoose.Schema;
 
-   var videGamesSchema = new Schema({
+   var videoGamesSchema = new Schema({
         title: String,
         developer: String,
         image: String,
