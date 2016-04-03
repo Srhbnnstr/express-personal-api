@@ -29,6 +29,14 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2">
           <h4><a href="/api"><strong>Read My API Documentation</strong></a></h4>
+          <div id='videoGamesTarget'>
+          <script id="videoGames-template" type="text/x-handlebars-template">
+            {{#each videoGames}}
+            <hr>
+            <p>
+              <b>{{title}}</b>
+              by {{developer.name}}
+            </script>
             </div>
           </div>
         </div>

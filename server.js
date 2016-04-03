@@ -67,7 +67,7 @@ db.videoGames.find()
 });
 
 // get one video game
-app.get('/api/videoGame/:id', function (req, res) {
+app.get('/api/videoGames/:id', function (req, res) {
   db.videoGames.findOne({_id: req.params._id }, function(err, data) {
     res.json(data);
   });
@@ -82,6 +82,29 @@ app.post('/api/videoGames', function (req, res) {
     image: req.body.image,
     releaseDate: req.body.releaseDate,
   });
+
+  // save newBook to database
+    new_videoGames.save(function(err, book){
+      if (err) {
+        return console.log("save error: " + err);
+      }
+      console.log("saved ", videoGames.title);
+      // send back the book!
+      res.json(book);
+    });
+  });
+});
+
+// delete book
+app.delete('/api/videoGames/:id', function (req, res) {
+  // get book id from url params (`req.params`)
+  console.log('videoGames delete', req.params);
+  var videoGamesId = req.params.id;
+  // find the index of the book we want to remove
+  db.videoGames.findOneAndRemove({ _id: videoGamesId }, function (err, deleted_videoGames) {
+    res.json(deleted_videoGames);
+  });
+});
 
 /**********
  * SERVER *
