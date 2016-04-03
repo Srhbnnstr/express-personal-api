@@ -50,11 +50,13 @@ app.get('/api', function api_index(req, res) {
       {method: "GET", path: "/api/profile", description: "Data about me"},
       {method: "GET", path: "/api/videoGames", description: "Lists my favorite games"},
       {method: "POST", path: "/api/videoGames", description: "Add a new game"},
-      {method: "DELETE", path: "/api/:videoGames", description: "Delete a game"}
+      {method: "DELETE", path: "/api/videoGames/:id", description: "Delete a game"}
 
     ]
   });
 });
+
+app.get('/api/videoGames', function (req, res) {
 
 /**********
  * SERVER *
