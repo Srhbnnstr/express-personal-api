@@ -6,7 +6,7 @@ body {
 
 h1 {
   font-family: 'Lobster' , cursive;
-  font-size: 75px;
+  font-size: 90px;
   padding-top: 150px;
   margin: auto;
   text-align: center;
@@ -23,6 +23,6 @@ a {
   text-decoration: underline;
   text-align: center;
   color: #3a3a3a;
-  padding-left: 50px;
+  margin: auto;
   position: relative;
 }
