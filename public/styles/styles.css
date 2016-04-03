@@ -23,6 +23,7 @@ a {
   text-decoration: underline;
   text-align: center;
   color: #3a3a3a;
-  padding: 20px;
+  padding-top: 20px;
+  padding-left: 60px;
   margin: auto;
 }
