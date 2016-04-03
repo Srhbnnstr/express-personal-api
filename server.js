@@ -56,7 +56,7 @@ app.get('/api', function api_index(req, res) {
   });
 });
 
-app.get('/api/videoGames', function (req, res) {
+app.get('/api/videoGames', function (req, res) {});
 
 /**********
  * SERVER *

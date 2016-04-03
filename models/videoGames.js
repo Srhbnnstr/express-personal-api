@@ -1,10 +1,13 @@
+
  var mongoose = require('mongoose'),
    Schema = mongoose.Schema;
 
-// var CampsiteSchema = new Schema({
-//   description: String
-// });
+   var videGamesSchema = new Schema({
+        title: String,
+        developer: String,
+        image: String,
+        releaseDate: String,
+   });
 
-// var Campsite = mongoose.model('Campsite', CampsiteSchema);
-
-// module.exports = Campsite;
+   var videoGames = mongoose.model('videoGames', videoGamesSchema);
+   module.exports = videoGames;
