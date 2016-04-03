@@ -93,7 +93,6 @@ app.post('/api/videoGames', function (req, res) {
       res.json(book);
     });
   });
-});
 
 // delete book
 app.delete('/api/videoGames/:id', function (req, res) {
