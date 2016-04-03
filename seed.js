@@ -18,87 +18,52 @@ var db = require('./models');
 
 var videoGames_list = [
   {
+  title: "Super Mario 64",
+  developer: "Nintendo",
+  //image: " ",
+  releaseDate: "June 23, 1996"
+  },
+  {
+  title: "Super Smash Bros. Melee",
+  developer: "HAL Laboratory",
+  //image: " ",
+  releaseDate: "November 21, 2001"
+  },
+  {
   title: "Grand Theft Auto: Vice City",
   developer: "Rockstar Games",
-  image: "https://s3-us-west-2.amazonaws.com/sandboxapi/to_kill_a_mockingbird.jpg",
+  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/les_miserables.jpg",
   releaseDate: "October 27, 2002"
   },
   {
-  title: "The Great Gatsby",
-  author: "F Scott Fitzgerald",
-  image: "https://s3-us-west-2.amazonaws.com/sandboxapi/great_gatsby.jpg",
-  releaseDate: "April 10, 1925"
+  title: "Fez",
+  developer: "Polytron Coporation",
+  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/around_the_world_in_80_days.jpg",
+  releaseDate: "April 13, 2012"
   },
   {
-  title: "Les Miserables",
-  author: "Victor Hugo",
-  image: "https://s3-us-west-2.amazonaws.com/sandboxapi/les_miserables.jpg",
-  releaseDate: "Unknown 1862"
+  title: "Hotline Miami",
+  developer: "Dennaton Games",
+  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/lean_in.jpg",
+  releaseDate: "October 23, 2012"
   },
   {
-  title: "Around the World in 80 Days",
-  author: "Jules Verne",
-  image: "https://s3-us-west-2.amazonaws.com/sandboxapi/around_the_world_in_80_days.jpg",
-  releaseDate: "January 30, 1873"
+  title: "The Last of Us",
+  developer: "Naughty Dog",
+  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/four_hour_work_week.jpg",
+  releaseDate: "June 14, 2013"
   },
   {
-  title: "Lean In",
-  author: "Sheryl Sandberg",
-  image: "https://s3-us-west-2.amazonaws.com/sandboxapi/lean_in.jpg",
-  releaseDate: "March 11, 2013"
+  title: "Rocket League",
+  developer: "Psyonix",
+  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/of_mice_and_men.jpg",
+  releaseDate: "July 7, 2015"
   },
   {
-  title: "The Four Hour Workweek",
-  author: "Tim Ferriss",
-  image: "https://s3-us-west-2.amazonaws.com/sandboxapi/four_hour_work_week.jpg",
-  releaseDate: "April 1, 2007"
-  },
-  {
-  title: "Of Mice and Men",
-  author: "John Steinbeck",
-  image: "https://s3-us-west-2.amazonaws.com/sandboxapi/of_mice_and_men.jpg",
-  releaseDate: "Unknown 1937"
-  },
-  {
-  title: "Romeo and Juliet",
-  author: "William Shakespeare",
-  image: "https://s3-us-west-2.amazonaws.com/sandboxapi/romeo_and_juliet.jpg",
-  releaseDate: "Unknown 1597"
-  }
-];
-
-var authors_list = [
-  {
-    name: "Harper Lee",
-    alive: false
-  },
-  {
-    name: "F Scott Fitzgerald",
-    alive: false
-  },
-  {
-    name: "Victor Hugo",
-    alive: false
-  },
-  {
-    name: "Jules Verne",
-    alive: false
-  },
-  {
-    name: "Sheryl Sandberg",
-    alive: true
-  },
-  {
-    name: "Tim Ferriss",
-    alive: true
-  },
-  {
-    name: "John Steinbeck",
-    alive: false
-  },
-  {
-    name: "William Shakespeare",
-    alive: false
+  title: "Fallout 4",
+  developer: "Bethesda Game Studios",
+  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/romeo_and_juliet.jpg",
+  releaseDate: "November 10, 2015"
   }
 ];
 
