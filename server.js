@@ -56,7 +56,32 @@ app.get('/api', function api_index(req, res) {
   });
 });
 
+//get all video games
 app.get('/api/videoGames', function (req, res) {});
+//return as JSON response
+db.videoGames.find()
+  .exec(function(err, videoGames) {
+    if (err) { return console.log("index error: " + err); }
+    res.json(videoGames);
+ });
+});
+
+// get one video game
+app.get('/api/videoGame/:id', function (req, res) {
+  db.videoGames.findOne({_id: req.params._id }, function(err, data) {
+    res.json(data);
+  });
+});
+
+// create new video game
+app.post('/api/videoGames', function (req, res) {
+  // create new video game with form data (`req.body`)
+  var newBook = new db.Book({
+    title: req.body.title,
+    developer: req.body.developer,
+    image: req.body.image,
+    releaseDate: req.body.releaseDate,
+  });
 
 /**********
  * SERVER *
