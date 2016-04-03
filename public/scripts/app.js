@@ -51,7 +51,7 @@ function render () {
 
   // append html to the view
   $videoGamesList.append(videoGamesHtml);
-};
+}
 
 function handleSuccess(json) {
   all_videoGames = json;
