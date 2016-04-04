@@ -46,7 +46,7 @@ function render () {
   // empty existing posts from view
   $videoGamesList.empty();
 
-  // pass `allBooks` into the template function
+
   var videoGamesHtml = template({ videoGames: all_videoGames });
 
   // append html to the view
@@ -77,11 +77,11 @@ function delete_videoGamesSuccess(json) {
   var videoGames = json;
   var videoGamesId = videoGames._id;
 
-  // find the book with the correct ID and remove it from our allBooks array
+  // find the video game with the correct ID and remove it from our all_videoGames array
   for(var index = 0; index < all_videoGames.length; index++) {
     if(all_videoGames[index]._id === videoGamesId) {
       all_videoGames.splice(index, 1);
-      break;  // we found our book - no reason to keep searching (this is why we didn't use forEach)
+      break;
     }
   }
   render();
