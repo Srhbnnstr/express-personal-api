@@ -29,14 +29,45 @@
             <div class="row">
               <div class="col-md-8 col-md-offset-2">
           <h4><a href="/api"><strong>Read My API Documentation</strong></a></h4>
-          <div id='videoGamesTarget'>
-          <script id="videoGames-template" type="text/x-handlebars-template">
-            {{#each videoGames}}
-            <hr>
-            <p>
-              <b>{{title}}</b>
-              by {{developer.name}}
-            </script>
+
+          <div id="profile">
+          <script id="profile-template" type="text/x-handlebars-template">
+            {{#each profile}}
+              <img src='{{portrait.jpg}}'>
+              <p>Name: {{name}}</p>
+              <p>Current City: {{current_city}} </p>
+              <p>Github Link: {{github_link}} </p>
+            {{/each}}
+          </script>
+        </div>
+
+        <div id='videoGamesTarget'>
+        <script id="videoGames-template" type="text/x-handlebars-template">
+          {{#each videoGames}}
+           <p>
+           <p>{{title}}</p>
+           <p>by {{developer.name}}</p>
+           <p>{{releaseDate}}</p>
+          {{/each}}
+        </script>
+      </div>
+
+
+    <form class="form-inline" id="new_videoGamesForm">
+      <div class="form-group">
+        <label for="title">Video Game Title</label>
+        <input type="text" class="form-control" name="title" placeholder="Video Game Title">
+      </div>
+      <div class="form-group">
+        <label for="title">Developer</label>
+        <input type="text" class="form-control" name="developer" placeholder="Developer">
+      </div>
+      <div class="form-group">
+        <label for="title">Release Date</label>
+          <input type="text" class="form-control" name="releaseDate" placeholder="releaseDate">
+      </div>
+        <button type="submit" class="btn btn-default">Create Video Game</button>
+      </form>
             </div>
           </div>
         </div>

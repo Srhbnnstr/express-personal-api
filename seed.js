@@ -16,6 +16,20 @@
 
 var db = require('./models');
 
+var new_profile = {
+name: "Sarah Bannister",
+photo: "portrait.jpg",
+github_link: "https://https://github.com/Srhbnnstr",
+current_city: "San Francisco, CA",
+interests: [{type: "Animals"},
+           {type: "Motorcycles"},
+           {type: "Hiking"},
+           {type: "Art"},
+           {type: "Video Games"},
+           {type: "Movies"},
+           {type: "Traveling"}]
+};
+
 var videoGames_list = [
   {
   title: "Super Mario 64",
@@ -67,41 +81,15 @@ var videoGames_list = [
   }
 ];
 
-// db.Author.remove({}, function(err, authors) {
-//   console.log('removed all authors');
-//   db.Author.create(authors_list, function(err, authors){
-//     if (err) {
-//       console.log(err);
-//       return;
-//     }
-//     console.log('recreated all authors');
-//     console.log("created", authors.length, "authors");
-//
-//
-//     db.Book.remove({}, function(err, books){
-//       console.log('removed all books');
-//       books_list.forEach(function (bookData) {
-//         var book = new db.Book({
-//           title: bookData.title,
-//           image: bookData.image,
-//           releaseDate: bookData.releaseDate
-//         });
-//         db.Author.findOne({name: bookData.author}, function (err, foundAuthor) {
-//           console.log('found author ' + foundAuthor.name + ' for book ' + book.title);
-//           if (err) {
-//             console.log(err);
-//             return;
-//           }
-//           book.author = foundAuthor;
-//           book.save(function(err, savedBook){
-//             if (err) {
-//               return console.log(err);
-//             }
-//             console.log('saved ' + savedBook.title + ' by ' + foundAuthor.name);
-//           });
-//         });
-//       });
-//     });
-//
-//   });
-// });
+
+db.videoGames.remove({}, function(err, videoGames) {
+  console.log('removed all video Games');
+db.videoGames.create(new_videoGames, function (err, videoGames) {
+    if ("Error", err) {
+      console.log(err);
+    } else {
+      console.log("Created new Video Game", videoGamesId);
+    }
+
+      process.exit(); // we're all done! Exit the program.
+    });

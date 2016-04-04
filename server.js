@@ -42,6 +42,7 @@ app.get('/', function homepage(req, res) {
 app.get('/api', function api_index(req, res) {
   // TODO: Document all your api endpoints below
   res.json({
+    document_all_endpoints: true,
     message: "Welcome to my personal api! Here's what you need to know!",
     documentation_url: "https://github.com/Srhbnnstr/express-personal-api",
     base_url: "https://pumpkin-crisp-33237.herokuapp.com/",
@@ -55,6 +56,15 @@ app.get('/api', function api_index(req, res) {
     ]
   });
 });
+
+app.get('/api/profile', function (req, res) {
+db.Profile.find({}, function (err, profile){
+     if (err) {
+       res.status(500).json('error');
+     }
+     res.status(200).json(profile);
+   });
+ });
 
 //get all video games
 app.get('/api/videoGames', function (req, res) {});
@@ -76,30 +86,29 @@ app.get('/api/videoGames/:id', function (req, res) {
 // create new video game
 app.post('/api/videoGames', function (req, res) {
   // create new video game with form data (`req.body`)
-  var newBook = new db.Book({
+  var new_videoGames = new db.videoGames({
     title: req.body.title,
     developer: req.body.developer,
     image: req.body.image,
     releaseDate: req.body.releaseDate,
   });
 
-  // save newBook to database
+  // save new video game to database
     new_videoGames.save(function(err, book){
       if (err) {
         return console.log("save error: " + err);
       }
       console.log("saved ", videoGames.title);
-      // send back the book!
-      res.json(book);
+      res.json(videoGames);
     });
   });
 
-// delete book
+// delete video game
 app.delete('/api/videoGames/:id', function (req, res) {
-  // get book id from url params (`req.params`)
+  // get video game id from url params (`req.params`)
   console.log('videoGames delete', req.params);
   var videoGamesId = req.params.id;
-  // find the index of the book we want to remove
+  // find the index of the video game we want to remove
   db.videoGames.findOneAndRemove({ _id: videoGamesId }, function (err, deleted_videoGames) {
     res.json(deleted_videoGames);
   });

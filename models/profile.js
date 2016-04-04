@@ -7,7 +7,7 @@
         photo: String,
         github_link: String,
         current_city: String,
-        hobbies: String,
+        interests: String
    });
 
    var profile = mongoose.model('profile', profileSchema);
