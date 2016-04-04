@@ -90,6 +90,6 @@ db.videoGames.create(new_videoGames, function (err, videoGames) {
     } else {
       console.log("Created new Video Game", videoGamesId);
     }
-
+    });
       process.exit(); // we're all done! Exit the program.
     });
