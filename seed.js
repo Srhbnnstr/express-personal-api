@@ -46,37 +46,37 @@ var videoGames_list = [
   {
   title: "Grand Theft Auto: Vice City",
   developer: "Rockstar Games",
-  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/les_miserables.jpg",
+  //image: " ",
   releaseDate: "October 27, 2002"
   },
   {
   title: "Fez",
   developer: "Polytron Coporation",
-  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/around_the_world_in_80_days.jpg",
+  //image: " ",
   releaseDate: "April 13, 2012"
   },
   {
   title: "Hotline Miami",
   developer: "Dennaton Games",
-  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/lean_in.jpg",
+  //image: " ",
   releaseDate: "October 23, 2012"
   },
   {
   title: "The Last of Us",
   developer: "Naughty Dog",
-  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/four_hour_work_week.jpg",
+  //image: " ",
   releaseDate: "June 14, 2013"
   },
   {
   title: "Rocket League",
   developer: "Psyonix",
-  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/of_mice_and_men.jpg",
+  //image: " ",
   releaseDate: "July 7, 2015"
   },
   {
   title: "Fallout 4",
   developer: "Bethesda Game Studios",
-  //image: "https://s3-us-west-2.amazonaws.com/sandboxapi/romeo_and_juliet.jpg",
+  //image: " ",
   releaseDate: "November 10, 2015"
   }
 ];

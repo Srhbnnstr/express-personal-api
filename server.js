@@ -1,34 +1,34 @@
 // require express and other modules
 var express = require('express'),
-    app = express();
+app = express();
 
 // parse incoming urlencoded form data
 // and populate the req.body object
 var bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(function(req, res, next) {
-     res.header("Access-Control-Allow-Origin", "*");
-     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-     next();
- });
+  res.header("Access-Control-Allow-Origin", "*");
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  next();
+});
 
 /************
- * DATABASE *
- ************/
+* DATABASE *
+************/
 
 var db = require('./models');
 
 /**********
- * ROUTES *
- **********/
+* ROUTES *
+**********/
 
 // Serve static files from the `/public` directory:
 // i.e. `/images`, `/scripts`, `/styles`
 app.use(express.static('public'));
 
 /*
- * HTML Endpoints
- */
+* HTML Endpoints
+*/
 
 app.get('/', function homepage(req, res) {
   res.sendFile(__dirname + '/views/index.html');
@@ -36,8 +36,8 @@ app.get('/', function homepage(req, res) {
 
 
 /*
- * JSON API Endpoints
- */
+* JSON API Endpoints
+*/
 
 app.get('/api', function api_index(req, res) {
   // TODO: Document all your api endpoints below
@@ -58,22 +58,22 @@ app.get('/api', function api_index(req, res) {
 });
 
 app.get('/api/profile', function (req, res) {
-db.Profile.find({}, function (err, profile){
-     if (err) {
-       res.status(500).json('error');
-     }
-     res.status(200).json(profile);
-   });
- });
+  db.Profile.find({}, function (err, profile){
+    if (err) {
+      res.status(500).json('error');
+    }
+    res.status(200).json(profile);
+  });
+});
 
 //get all video games
 app.get('/api/videoGames', function (req, res) {});
 //return as JSON response
 db.videoGames.find()
-  .exec(function(err, videoGames) {
-    if (err) { return console.log("index error: " + err); }
-    res.json(videoGames);
- });
+.exec(function(err, videoGames) {
+  if (err) { return console.log("index error: " + err); }
+  res.json(videoGames);
+});
 });
 
 // get one video game
@@ -94,14 +94,14 @@ app.post('/api/videoGames', function (req, res) {
   });
 
   // save new video game to database
-    new_videoGames.save(function(err, book){
-      if (err) {
-        return console.log("save error: " + err);
-      }
-      console.log("saved ", videoGames.title);
-      res.json(videoGames);
-    });
+  new_videoGames.save(function(err, book){
+    if (err) {
+      return console.log("save error: " + err);
+    }
+    console.log("saved ", videoGames.title);
+    res.json(videoGames);
   });
+});
 
 // delete video game
 app.delete('/api/videoGames/:id', function (req, res) {
@@ -115,10 +115,10 @@ app.delete('/api/videoGames/:id', function (req, res) {
 });
 
 /**********
- * SERVER *
- **********/
+* SERVER *
+**********/
 
 // listen on port 3000
 app.listen(process.env.PORT || 3000, function () {
   console.log('Express server is up and running on http://localhost:3000/');
- });
+});
