@@ -1,7 +1,7 @@
 var mongoose = require("mongoose");
 mongoose.connect( process.env.MONGOLAB_URI ||
                   process.env.MONGOHQ_URL ||
-                  "mongodb://localhost/personal-api");
+                  "https://pumpkin-crisp-33237.herokuapp.com/");
 
 // module.exports.Campsite = require("./campsite.js.example");
 module.exports.videoGames = require("./videoGames.js");
